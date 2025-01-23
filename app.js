@@ -13,3 +13,13 @@ function adicionarAmigo() {
         alert("Por favor, insira um nome válido.");
     }
 }
+
+function sortearAmigo() {
+    if (nomes.length > 0) {
+        const indiceAleatorio = Math.floor(Math.random() * nomes.length);
+        const amigoSecreto = nomes[indiceAleatorio];
+        document.getElementById('resultado').innerText = `O amigo secreto é: ${amigoSecreto}`;
+    } else {
+        alert("A lista de nomes está vazia.");
+    }
+}
